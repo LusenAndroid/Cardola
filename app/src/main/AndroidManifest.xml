@@ -1,0 +1,123 @@
+<manifest package="com.lusen.cardola"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_SETTINGS"/>
+
+    <uses-sdk
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:overrideLibrary="com.facebook.shimmer"/>
+
+    <application
+        android:name="com.lusen.cardola.business.CardolaApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <meta-data
+            android:name="com.lusen.cardola.framework.image.GlideModuleConfig"
+            android:value="GlideModule"/>
+
+        <activity
+            android:name="com.lusen.cardola.business.main.component.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lusen.cardola.business.main.component.HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.xiami.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="home"
+                    android:scheme="cardola"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lusen.cardola.business.main.component.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.xiami.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="login"
+                    android:scheme="cardola"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lusen.cardola.business.main.component.FindPasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.xiami.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="find_password"
+                    android:scheme="cardola"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lusen.cardola.business.main.component.AddCustomerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.xiami.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="add_customer"
+                    android:scheme="cardola"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lusen.cardola.business.main.component.MinePerformanceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.xiami.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="mine_performance"
+                    android:scheme="cardola"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.lusen.cardola.business.main.component.MineMessageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="com.xiami.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="mine_message"
+                    android:scheme="cardola"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
