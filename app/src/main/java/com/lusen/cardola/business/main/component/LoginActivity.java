@@ -84,12 +84,13 @@ public class LoginActivity extends CardolaBaseActivity implements View.OnClickLi
             @Override
             public void onError(Throwable e) {
                 super.onError(e);
-                updateLoadingDialog(false);
                 ToastUtil.toast("登录异常");
+                updateLoadingDialog(false);
             }
 
             @Override
             public void onNext(BaseResponse<LoginResp> response) {
+                ToastUtil.toast("登录成功");
                 updateLoadingDialog(false);
                 Nav.fromHost(SchemeUrlConstant.Host.HOME).nav();
             }
